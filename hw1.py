@@ -51,16 +51,16 @@ def top5_countries_by_date(day: int, month: int, year: int = 2020) -> List[str]:
     # Your code goes here (remove pass)
     pass
 
-
-def new_cases_count(day: int, month: int, year: int = 2020) -> int:
+# Function name is wrong, read the pydoc
+def no_new_cases_count(day: int, month: int, year: int = 2020) -> int:
     """
     Returns the number of countries/regions where the infection count in a given day
-    was not the same as the previous day.
+    was NOT the same as the previous day.
 
     Ex.
-    >>> new_cases_count(11, 2, 2020)
+    >>> no_new_cases_count(11, 2, 2020)
     35
-    >>> new_cases_count(3, 3)
+    >>> no_new_cases_count(3, 3)
     57
 
     :param day: 4 digit integer representation of the year to get the cases for, defaults to 2020
