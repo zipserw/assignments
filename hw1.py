@@ -52,8 +52,6 @@ def top5_countries_by_date(day: int, month: int, year: int = 2020) -> List[str]:
     pass
 
 
-
-
 def new_cases_count(day: int, month: int, year: int = 2020) -> int:
     """
     Returns the number of countries/regions where the infection count in a given day
