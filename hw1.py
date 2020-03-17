@@ -10,8 +10,6 @@ When downloading data it's better to do it in a global scope instead of a functi
 This speeds up the tests significantly
 """
 confirmed_cases = pd.read_csv(CONFIRMED_CASES_URL, error_bad_lines=False)
-
-
 def poland_cases_by_date(day: int, month: int, year: int = 2020) -> int:
     """
     Returns confirmed infection cases for country 'Poland' given a date.
@@ -29,7 +27,10 @@ def poland_cases_by_date(day: int, month: int, year: int = 2020) -> int:
     """
     
     # Your code goes here (remove pass)
-    pass
+    result = confirmed_cases.loc[df["Country/Region"]=="Poland"][f"{mies}/{dzien}/{year}"].values[0]
+    return result
+poland_cases_by_date(7,3,2020)
+poland_cases_by_date(11,3)
 
 
 def top5_countries_by_date(day: int, month: int, year: int = 2020) -> List[str]:
